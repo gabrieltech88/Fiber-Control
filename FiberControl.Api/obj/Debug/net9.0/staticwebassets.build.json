@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "qtingNZZ6ppl9LyEjaORZ9FRXjYnZpDn4XmBoLca2JI=",
+  "Source": "FiberControl.Api",
+  "BasePath": "_content/FiberControl.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
