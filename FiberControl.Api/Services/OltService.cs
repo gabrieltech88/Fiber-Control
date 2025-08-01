@@ -62,19 +62,14 @@ public class OltService
         try
         {
             string output = await ExecutarComando($"by-desc {dto.Descricao}", dto.Nome);
-            Console.WriteLine(output);
 
             string[] linhas = output.Split('\n');
-            var linhasRelevantes = linhas.Skip(25).ToArray();
-            
-            linhasRelevantes = linhasRelevantes.Take(linhasRelevantes.Length - 12).ToArray();
+            var linha = linhas.Where(l => l.Contains("online") || l.Contains("offline") && l.Contains("active")).ToArray();
+            Console.WriteLine(linha[0]);
 
-            Console.WriteLine(linhas.Count());
-
-            foreach (string linha in linhasRelevantes)
-            {
-                Console.WriteLine(linha);
-            };
+            string[] elementos = linha[0].Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+            Console.WriteLine(elementos[5]);
+            string status = elementos[5];
 
 
             return output;
