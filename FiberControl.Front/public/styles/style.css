@@ -1,8 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
 :root {
-    --laranja: #FFA000;
+    --laranja: #Ff861b;
 }
 
 body {
     height: 100vh;
     box-sizing: border-box;
+    background: linear-gradient(to bottom, rgb(60, 60, 60), rgb(0, 0, 0));
 }
+
+body main section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+img {
+    height: 32px;
+    width: 32px;
+    margin: 0 2px;
+    vertical-align: bottom;
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    margin-bottom: 150px;
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+}
+
+
+#configuracoes {
+    display: flex;
+    gap: 20px;
+    
+}
+
+#select-olt {
+    appearance: none;
+    border: 2px solid var(--laranja);
+    padding: 4px;
+    border-radius: 7px;
+    background-color: transparent;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    width: 150px;
+}
+
+
+#input {
+    background-color: rgb(64, 64, 64);
+    border: 2px solid var(--laranja);
+    border-radius: 4px;
+    color: white;
+    width: 200px;
+    height: 32px;
+    padding: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#btn {
+    background: linear-gradient(to right, #ff6600, #ff9900);
+    /* laranja vibrante */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#btn:hover {
+    background: #333;
+    /* cinza escuro no hover */
+    color: #ff9900;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+#output {
+    width: 600px;
+    height: 250px;
+    font-family: "JetBrains Mono", monospace;;
+}
+
+#output p {
+    margin-top: 10px;
+}
+
+.borda-raio {
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border: 4px solid;
+    border-radius: 15px;
+    background: #111;
+    border-image: linear-gradient(90deg, #ff9900, #ff6600, #ff3300) 1;
+    animation: raioCorrendo 3s linear infinite;
+}
+
+@keyframes raioCorrendo {
+    0% {
+        border-image-source: linear-gradient(90deg, #ff9900, #ff6600, #ff3300);
+    }
+
+    50% {
+        border-image-source: linear-gradient(180deg, #ff9900, #ff6600, #ff3300);
+    }
+
+    100% {
+        border-image-source: linear-gradient(270deg, #ff9900, #ff6600, #ff3300);
+    }
+}
+
+
