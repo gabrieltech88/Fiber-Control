@@ -107,3 +107,4 @@ C:\Users\Rapid\Documents\PROJECTS\FiberControl\FiberControl.Api\obj\Debug\net9.0
 C:\Users\Rapid\Documents\PROJECTS\FiberControl\FiberControl.Api\obj\Debug\net9.0\FiberControl.Api.pdb
 C:\Users\Rapid\Documents\PROJECTS\FiberControl\FiberControl.Api\obj\Debug\net9.0\FiberControl.Api.genruntimeconfig.cache
 C:\Users\Rapid\Documents\PROJECTS\FiberControl\FiberControl.Api\obj\Debug\net9.0\ref\FiberControl.Api.dll
+C:\Users\Rapid\Documents\PROJECTS\FiberControl\FiberControl.Api\obj\Debug\net9.0\FiberControl.Api.sourcelink.json

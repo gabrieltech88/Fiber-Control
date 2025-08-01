@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FiberControl.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3ba8db953a926e2fe56733d7757564587804329")]
 [assembly: System.Reflection.AssemblyProductAttribute("FiberControl.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FiberControl.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

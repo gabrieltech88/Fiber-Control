@@ -53,11 +53,12 @@ namespace FiberControlApi.Data.Dal
 
         public async Task<Olt> PegarOlt(string nome)
         {
-            try 
+            try
             {
                 var olt = await _context.Olts.Where(o => o.Nome == nome).FirstOrDefaultAsync();
                 return olt;
-            }catch 
+            }
+            catch
             {
                 throw new Exception("Erro ao buscar OLT");
             }
