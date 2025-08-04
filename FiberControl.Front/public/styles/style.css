@@ -41,7 +41,7 @@ h1 {
 #configuracoes {
     display: flex;
     gap: 20px;
-    
+
 }
 
 #select-olt {
@@ -54,6 +54,16 @@ h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     width: 150px;
+    background: url('../assets/arrow.svg') no-repeat right 8px center;
+    padding-left: 15px;
+}
+
+#opt {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    background-color: teal;
+
 }
 
 
@@ -62,9 +72,10 @@ h1 {
     border: 2px solid var(--laranja);
     border-radius: 4px;
     color: white;
-    width: 200px;
+    width: 100px;
     height: 32px;
     padding: 5px;
+    text-align: center;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -79,6 +90,7 @@ h1 {
     color: white;
     border: none;
     border-radius: 6px;
+    width: 150px;
     padding: 8px 16px;
     font-size: 12px;
     font-weight: bold;
@@ -97,7 +109,8 @@ h1 {
 #output {
     width: 600px;
     height: 250px;
-    font-family: "JetBrains Mono", monospace;;
+    font-family: "JetBrains Mono", monospace;
+    ;
 }
 
 #output p {
@@ -128,5 +141,3 @@ h1 {
         border-image-source: linear-gradient(270deg, #ff9900, #ff6600, #ff3300);
     }
 }
-
-

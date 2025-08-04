@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\FiberControl.Api.csproj": {}
+    "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/FiberControl.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\FiberControl.Api.csproj": {
+    "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/FiberControl.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\FiberControl.Api.csproj",
+        "projectUniqueName": "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/FiberControl.Api.csproj",
         "projectName": "FiberControl.Api",
-        "projectPath": "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\FiberControl.Api.csproj",
-        "packagesPath": "C:\\Users\\Rapid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\obj\\",
+        "projectPath": "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/FiberControl.Api.csproj",
+        "packagesPath": "/Users/gabriel/.nuget/packages/",
+        "outputPath": "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rapid\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -100,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
