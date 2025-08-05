@@ -25,12 +25,12 @@ public class OltController : ControllerBase
     public async Task<IActionResult> VerificarCliente([FromBody] StatusRequest dto)
     {
         var result = await _oltService.ChecarStatus(dto);
-        if (result != "Online")
+        if (result != "online")
         {
-            return NoContent();
+            return StatusCode(202, new { status = result});
         }
 
-        return Ok(result);
+        return Ok(new { status = result});
     }
 
 }

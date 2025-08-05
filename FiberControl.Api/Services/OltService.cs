@@ -72,7 +72,7 @@ public class OltService
             string status = elementos[5];
 
 
-            return output;
+            return status;
         }
         catch (HttpRequestException ex)
         {

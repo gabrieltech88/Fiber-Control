@@ -17,12 +17,13 @@ btn.addEventListener("click", async () => {
     const porta = input.value;
 
     if (intervalId === null) {
-        text.textContent = "Resultado..."
+        text.textContent = "Um momento, realizando verificação..."
         intervalId = setInterval(() => iniciarLimpeza(olt, porta, () => {
             clearInterval(intervalId);
             intervalId = null
             localStorage.clear()
             btn.textContent = "Iniciar Limpeza"
+            text.textContent = "Resultado..."
         }), 5000);
         btn.textContent = "Terminar Limpeza"
     } else {

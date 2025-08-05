@@ -2583,19 +2583,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/gabriel/.nuget/packages/": {}
+    "C:\\Users\\Rapid\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/FiberControl.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\FiberControl.Api.csproj",
       "projectName": "FiberControl.Api",
-      "projectPath": "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/FiberControl.Api.csproj",
-      "packagesPath": "/Users/gabriel/.nuget/packages/",
-      "outputPath": "/Users/gabriel/Desktop/Applications/Fiber-Control/FiberControl.Api/obj/",
+      "projectPath": "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\FiberControl.Api.csproj",
+      "packagesPath": "C:\\Users\\Rapid\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rapid\\Documents\\PROJECTS\\FiberControl\\FiberControl.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gabriel/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Rapid\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -2619,7 +2619,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -2681,7 +2681,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

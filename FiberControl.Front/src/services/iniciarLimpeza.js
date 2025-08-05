@@ -1,15 +1,19 @@
 import puxarDadosOlt from "./oltRequest.js"
+import onuRequest from "./onuRequest.js"
 
 const text = document.getElementById('text')
 let chave = 0
+let emProcesso = false;
+let verificando = true
 
 async function iniciarLimpeza(olt, porta, encerrar) {
 
     let dado = await puxarDadosOlt(olt, porta) //Faz a requisição e recebe um array com strings dos clientes offline
+
     localStorage.setItem(`dado${chave}`, JSON.stringify(dado)) //Transforma o array em string e guarda no localstorage
 
 
-    if (chave > 0) { //Se a chave for maior que 0 quer dizer que existem dois registros na local storage
+    if (chave > 0 && !emProcesso) { //Se a chave for maior que 0 quer dizer que existem dois registros na local storage
         const penultimoDadoRaw = localStorage.getItem(`dado${chave - 1}`); //Pegamos o penultimo item
         const ultimoDadoRaw = localStorage.getItem(`dado${chave}`); //Pegamos o ultimo item
 
@@ -20,6 +24,7 @@ async function iniciarLimpeza(olt, porta, encerrar) {
             let clienteOff = ultimoDado.filter(x => !penultimoDado.includes(x)); //compara os dois arrays e verifica qual elemento é incomum
 
             if (clienteOff.length > 0) {
+                emProcesso = true;
                 const propriedades = clienteOff[0].split(" ").filter(item => item.trim() !== '');
     
                 const ppoe = propriedades[5];
@@ -29,16 +34,17 @@ async function iniciarLimpeza(olt, porta, encerrar) {
                 Peça para o técnico conectar o cliente de volta`;
 
                 while(true) {
-                    const func = onuRequest(ppoe)
+                    const func = await onuRequest(olt, ppoe)
 
                     if(func === true) {
                         text.textContent = "Cliente online"
+                        await sleep(4000)
+                        encerrar();
+                        emProcesso = false;
+                        verificando = true
                         break;
                     }
                 }
-
-                encerrar();
-    
             } else {
                 text.textContent = "Pedir para o técnico retirar uma porta";
             }
@@ -48,5 +54,10 @@ async function iniciarLimpeza(olt, porta, encerrar) {
 
     chave++;
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 export default iniciarLimpeza;
