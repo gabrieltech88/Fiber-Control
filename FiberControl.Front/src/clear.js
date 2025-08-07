@@ -1,4 +1,5 @@
-import iniciarLimpeza from "./iniciarLimpeza.js"
+import iniciarLimpeza from "./services/iniciarLimpeza.js"
+import mostrarClientes from "./services/mostrarClientes.js"
 
 const form = document.getElementById('entradas')
 const selectOlt = document.getElementById('select-olt')
@@ -6,6 +7,7 @@ const input = document.getElementById('input')
 const output = document.getElementById('output')
 const text = document.getElementById('text')
 const btn = document.getElementById('btn')
+const textClient = document.getElementById('text-client')
 let funcao;
 let intervalId = null;
 
@@ -30,7 +32,10 @@ btn.addEventListener("click", async () => {
         clearInterval(intervalId);
         intervalId = null
         localStorage.clear()
+        btn.textContent = "Encerrando..."
+        await mostrarClientes(olt, porta)
         btn.textContent = "Iniciar Limpeza"
+        text.innerHTML = ""
         text.textContent = "Resultado..."
     }
 })

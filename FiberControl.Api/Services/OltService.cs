@@ -18,7 +18,7 @@ public class OltService
     public async Task<string> ExecutarComando(string comando, string nome)
     {
         var response = await _oltDal.PegarOlt(nome);
-        Console.WriteLine(response.Ip);
+       // Console.WriteLine(response.Ip);
         OltConnection conn = new OltConnection(response.Ip, _configuration["User"], _configuration["Password"]);
 
         var shell = conn.CreateConnection();
@@ -41,7 +41,7 @@ public class OltService
         {
 
             string output = await ExecutarComando($"summary {dto.Porta} | include -/-", dto.Nome);
-            
+
             string[] linhas = output.Split('\n');
             var linhasRelevantes = linhas.Skip(24).ToArray();
 
@@ -65,14 +65,46 @@ public class OltService
 
             string[] linhas = output.Split('\n');
             var linha = linhas.Where(l => l.Contains("online") || l.Contains("offline") && l.Contains("active")).ToArray();
-            Console.WriteLine(linha[0]);
+            //Console.WriteLine(linha[0]);
 
             string[] elementos = linha[0].Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
-            Console.WriteLine(elementos[5]);
+            //Console.WriteLine(elementos[5]);
             string status = elementos[5];
 
 
             return status;
+        }
+        catch (HttpRequestException ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    public async Task<List<string[]>> ChecarCausaDaQueda(ClearRequest dto)
+    {
+
+        try
+        {
+            string output = await ExecutarComando($"summary {dto.Porta} | include off", dto.Nome);
+
+            string[] linhas = output.Split('\n');
+
+            var linhasRelevantes = linhas.Where(l => l.Contains("offline")).ToArray();
+
+            List<string[]> elementos = new List<string[]>();
+            int[] indicesParaRemover = { 1, 2, 3, 4, 5 };
+
+            for (int i = 0; i < linhasRelevantes.Length; i++)
+            {
+                string[] linha = linhasRelevantes[i].Split((char[])null, StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string[] resultado = linha
+                       .Where((valor, index) => !indicesParaRemover.Contains(index))
+                       .ToArray();
+
+                elementos.Add(resultado);
+            }
+
+            return elementos;
         }
         catch (HttpRequestException ex)
         {

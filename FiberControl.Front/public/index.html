@@ -11,29 +11,46 @@
 </head>
 
 <body>
+    <div id="container">
+
+    </div>
     <header id="header">
         <h1>Fiber C<img src="./assets/icon.svg" alt="">ntrol</h1>
     </header>
     <main>
         <Section>
-            <div id="configuracoes">
-                <select id="select-olt">
-                    <option id="opt" value="Boqueirão">Boqueirão</option>
-                    <option id="opt" value="Samambaia">Samambaia</option>
-                    <option id="opt" value="Mirim">Mirim</option>
-                    <option id="opt" value="CPD">CPD</option>
-                    <option id="opt" value="Glória">Glória</option>
-                </select>
-                <input id="input" type="text" placeholder="Porta">
-                <button id="btn">Começar Limpeza</button>
+            <div id="desk">
+                <div id="configuracoes">
+                    <select id="select-olt">
+                        <option id="opt" value="Boqueirão">Boqueirão</option>
+                        <option id="opt" value="Samambaia">Samambaia</option>
+                        <option id="opt" value="Mirim">Mirim</option>
+                        <option id="opt" value="CPD">CPD</option>
+                        <option id="opt" value="Glória">Glória</option>
+                    </select>
+                    <input id="input" type="text" placeholder="Porta">
+                    <button id="btn" class="btn">Começar Limpeza</button>
+                </div>
             </div>
-            <div id="output" class="borda-raio">
-                <p id="text">Resultado...</p>
+            <div id="outputs">
+                <div id="output" class="borda-raio">
+                    <p id="text" class="text">Resultado</p>
+                </div>
+                <div id="resultados">
+                    <div id="output-client" class="borda-raio">
+                        <p id="text-client" class="text">ID | CAUSA DA QUEDA
+                            
+                        </p>
+                        <hr>
+                    </div>
+                </div>
             </div>
         </Section>
+
     </main>
-    <script type="module" src="../src/services/clear.js"></script>
-      <script type="module" src="../src/services/oltRequest.js"></script>
+    <script type="module" src="../src/clear.js"></script>
+    <script type="module" src="../src/services/mostrarClientes.js"></script>
+    <script type="module" src="../src/services/oltRequest.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,10 @@
     --laranja: #Ff861b;
 }
 
+html, body, * {
+    cursor: url('../assets/cursor.cur') 0 0, auto !important;
+}
+
 body {
     height: 100vh;
     box-sizing: border-box;
@@ -11,7 +15,36 @@ body {
     overflow-y: hidden;
 }
 
+/* Centraliza todo o conteúdo na tela */
 body main section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#outputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#resultados #output-client {
+    width: 450px;
+    height: 250px;
+
+}
+
+.text {
+    font-family: "JetBrains Mono", monospace;
+    margin-top: 10px;
+}
+
+#text-client {
+    text-align: center;
+}
+
+#desk {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -40,6 +73,7 @@ h1 {
 
 #configuracoes {
     display: flex;
+    flex-direction: row;
     gap: 20px;
 
 }
@@ -62,10 +96,12 @@ h1 {
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    background-color: teal;
-
+    background-color: #333;
 }
 
+#select-olt:focus {
+    outline: none;
+}
 
 #input {
     background-color: rgb(64, 64, 64);
@@ -77,14 +113,16 @@ h1 {
     padding: 5px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
+    caret-color: var(--laranja);
 }
 
 
 #input:focus {
     outline: none;
+    background-color:  rgb(64, 64, 64);
 }
 
-#btn {
+.btn {
     background: linear-gradient(to right, #ff6600, #ff9900);
     /* laranja vibrante */
     color: white;
@@ -99,7 +137,7 @@ h1 {
     transition: all 0.3s ease;
 }
 
-#btn:hover {
+.btn:hover {
     background: #333;
     /* cinza escuro no hover */
     color: #ff9900;
@@ -109,12 +147,6 @@ h1 {
 #output {
     width: 600px;
     height: 250px;
-    font-family: "JetBrains Mono", monospace;
-    ;
-}
-
-#output p {
-    margin-top: 10px;
 }
 
 .borda-raio {
@@ -141,3 +173,12 @@ h1 {
         border-image-source: linear-gradient(270deg, #ff9900, #ff6600, #ff3300);
     }
 }
+
+.text-queda {
+    font-size: 12px;
+}
+
+.span {
+    color: var(--laranja);
+}
+

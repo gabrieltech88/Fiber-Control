@@ -27,10 +27,18 @@ public class OltController : ControllerBase
         var result = await _oltService.ChecarStatus(dto);
         if (result != "online")
         {
-            return StatusCode(202, new { status = result});
+            return StatusCode(202, new { status = result });
         }
 
-        return Ok(new { status = result});
+        return Ok(new { status = result });
     }
+    
+    [HttpPost("queda")]
+    public async Task<IActionResult> VerificarCausaDaQueda([FromBody] ClearRequest dto)
+    {
+        var resultado = await _oltService.ChecarCausaDaQueda(dto);
+        return Ok(resultado);
+    }
+
 
 }

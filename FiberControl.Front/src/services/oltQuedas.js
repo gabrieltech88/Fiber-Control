@@ -1,5 +1,5 @@
-async function puxarDadosOlt(nome, porta) {
-    const response = await fetch("https://localhost:7155/olt/clear", {
+async function puxarDadosOltQuedas(nome, porta) {
+    const response = await fetch("https://localhost:7155/olt/queda", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -10,14 +10,10 @@ async function puxarDadosOlt(nome, porta) {
         })
     })
 
-  
-
     const data = await response.json();
     //console.log(data)
-    
+
     return data;
 }
 
-
-
-export default puxarDadosOlt
+export default puxarDadosOltQuedas
