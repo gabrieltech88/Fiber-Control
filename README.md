@@ -88,7 +88,7 @@ Consulte o arquivo `LICENSE` para mais detalhes.
 ---
 
 ### 📬 Contato
-Desenvolvido por *Gabriel Ramos* 
+Desenvolvido por **Gabriel Ramos**
 
 📧 Contato: [gabrieltech209@gmail.com](mailto:gabrieltech209@gmail.com)
 
