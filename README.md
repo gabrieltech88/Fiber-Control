@@ -77,7 +77,8 @@ A **string de conexão com o banco de dados** é armazenada usando o sistema de 
   # Configure a string de conexão com o comando acima
   # Execute o projeto
   dotnet run
-A API será iniciada normalmente em `https://localhost:7155`\n
+A API será iniciada normalmente em `https://localhost:7155`  
+
 Abra o arquivo `index.html` no navegador ou utilize um servidor como `live-server`
 
 ### 📄 Licença
@@ -87,7 +88,8 @@ Consulte o arquivo `LICENSE` para mais detalhes.
 ---
 
 ### 📬 Contato
-Desenvolvido por [Gabriel Ramos]\n
+Desenvolvido por [Gabriel Ramos]  
+
 📧 Contato: [gabrieltech209@gmail.com]
 
 
