@@ -1,0 +1,96 @@
+# Arquivos temporários do Visual Studio
+*.suo
+*.user
+*.sln.docstates
+
+# Pastas e arquivos de build
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# Pacotes NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# Resultados de testes MSTest
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Arquivos de compilação e intermediários
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.scc
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store*
+Thumbs.db
+desktop.ini
+
+# Caches e arquivos temporários do Visual Studio e extensões
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+.vs/
+
+# Perfis e ferramentas adicionais
+*.psess
+*.vsp
+*.vspx
+*.gpState
+_ReSharper*/
+*.[Rr]e[Ss]harper
+_TeamCity*
+*.dotCover
+*.ncrunch*
+.*crunch*.local.xml
+
+# Diretórios de publicação e pacotes
+publish/
+*.Publish.xml
+AppPackages/
+
+# Configurações específicas, backups e outros arquivos não essenciais
+*.pfx
+*.publishsettings
+AppData/
+Generated_Code/
+_UpgradeReport_Files/
+Backup*/
+
+# IDEs e editores
+.idea/
+.vscode/
+
+# Outros arquivos e pastas que podem ser ignorados
+**/node_modules/*
+**/wwwroot/*
+
+# Arquivos de logs, caches e temporários genéricos
+*.log
+*.cache
+*.tmp

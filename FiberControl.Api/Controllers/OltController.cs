@@ -12,7 +12,7 @@ public class OltController : ControllerBase
     {
         _oltService = oltService;
     }
-    
+
 
     [HttpPost("clear")]
     public async Task<IActionResult> LimpezaDeCto([FromBody] ClearRequest dto)
@@ -20,4 +20,25 @@ public class OltController : ControllerBase
         var result = await _oltService.FazerLimpeza(dto);
         return Ok(result);
     }
+
+    [HttpPost("status")]
+    public async Task<IActionResult> VerificarCliente([FromBody] StatusRequest dto)
+    {
+        var result = await _oltService.ChecarStatus(dto);
+        if (result != "online")
+        {
+            return StatusCode(202, new { status = result });
+        }
+
+        return Ok(new { status = result });
+    }
+    
+    [HttpPost("queda")]
+    public async Task<IActionResult> VerificarCausaDaQueda([FromBody] ClearRequest dto)
+    {
+        var resultado = await _oltService.ChecarCausaDaQueda(dto);
+        return Ok(resultado);
+    }
+
+
 }
