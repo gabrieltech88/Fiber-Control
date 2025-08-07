@@ -84,7 +84,9 @@ Abra o arquivo index.html no navegador ou utilize um servidor como live-server
 Este projeto está licenciado sob a MIT License.
 Consulte o arquivo LICENSE para mais detalhes.
 
-###📬 Contato
+---
+
+### 📬 Contato
 Desenvolvido por [Gabriel Ramos]
 📧 Contato: [gabrieltech209@gmail.com]
 
