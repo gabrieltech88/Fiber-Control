@@ -56,9 +56,9 @@ A **string de conexão com o banco de dados** é armazenada usando o sistema de 
    ```bash
    cd fibercontrol
 2. Inicialize os secrets do projeto
-  ```bash
-  dotnet user-secrets init
-  ```
+   ```bash
+   dotnet user-secrets init
+   
 3. Defina a ConnectionString com suas credenciais do MySQL
    ```bash
    dotnet user-secrets set "ConnectionString" "server=localhost;user=root;password=suasenha;database=fiberdb"
