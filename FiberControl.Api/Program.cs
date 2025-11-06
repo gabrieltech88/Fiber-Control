@@ -23,7 +23,6 @@ var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<FiberControlContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<OltService>();
 builder.Services.AddScoped<OltDAL>();
