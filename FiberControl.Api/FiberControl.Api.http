@@ -1,6 +1,0 @@
-@FiberControl.Api_HostAddress = http://localhost:5207
-
-GET {{FiberControl.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

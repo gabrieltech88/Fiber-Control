@@ -1,5 +1,5 @@
 async function onuRequest(nome, descricao) {
-    const response = await fetch("https://localhost:7155/olt/status", {
+    const response = await fetch("https://localhost:7155/api/olt/status", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
