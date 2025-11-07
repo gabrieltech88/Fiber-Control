@@ -1,5 +1,5 @@
 async function puxarDadosOltQuedas(nome, porta) {
-    const response = await fetch("https://localhost:7155/olt/queda", {
+    const response = await fetch("https://localhost:7155/api/olt/queda", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
